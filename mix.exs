@@ -21,7 +21,7 @@ defmodule Staccato.Proxy.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [
-      applications: [:logger, :httpotion],
+      applications: [:logger, :httpotion, :socket],
       mod: {Staccato.Proxy, []}
     ]
   end
@@ -39,7 +39,9 @@ defmodule Staccato.Proxy.Mixfile do
     [
       {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.2"},
       {:httpotion, "~> 2.1.0"},
-      {:socket, github: "meh/elixir-socket", branch: "master"}
+      # {:socket, github: "meh/elixir-socket", branch: "master"},
+      {:socket, "~> 0.3.5"},
+      {:distillery, "~> 0.9"}
     ]
   end
 end
